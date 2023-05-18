@@ -1,4 +1,4 @@
-# YOLOv5-GUI
+# TSR Dataset Data Augmentation
 TSR数据集数据增强共包含两个文件：1.0TSR-DataAugmentation和1.1TSR-DataAugmentation。都具备批量生成图片，批量重写label file的功能。两者主要思路一致，1.0TSR-DataAugmentation是将一张图上所有的标注标志替换为同一个类别的标志marks，即数据增强后一张图上所有标志都为同一个。
 
 1.1TSR-DataAugmentation是进一步升级，不同于前者全部替换，后者是根据原图上的类别，判断是粘贴原类别的marks还是根据规则替换为别的类别的marks，详见论文。两者代码上最大的区别在于重写label file的方式，后者是先将.txt的文件读入为numpy矩阵，更改后，再将矩阵写入.txt文件中。
